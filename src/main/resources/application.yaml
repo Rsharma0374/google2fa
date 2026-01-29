@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: google2fa
+# Sample configuration for Google 2FA
+# Place this in src/main/resources/application.yml
+
+google2fa:
+  # Enable or disable Google 2FA
+  enabled: true
+
+  # The issuer name shown in Google Authenticator app
+  issuer: "guardian-services"
+
+  # Time window for TOTP validation
+  # Default is 3 (checks current time and 1 step before/after)
+  window-size: 3
+
+  # QR code dimensions
+  qr-code-width: 300
+  qr-code-height: 300
+
+  # Time period for TOTP in seconds (standard is 30)
+  time-period: 30
+
+  # Number of digits in the TOTP code (standard is 6)
+  code-digits: 6
+
+  # Secret key length in bytes (standard is 20 bytes = 160 bits)
+  secret-key-length: 20
